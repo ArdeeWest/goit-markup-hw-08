@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Портфолио веб-студии</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+      integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./css/main.min.css" />
+  </head>
+  <body>
+    <!-- Шапка -->
+    <header class="page-header">
+      <!-- Кликабельный логотип-->
+      <div class="container container-nav">
+        <nav class="header-nav">
+          <a class="logo page-header__logo" lang="en" href="./index.html"
+            >Web<span class="logo__part">Studio</span></a
+          >
+
+          <!-- Меню -->
+          <ul class="header-menu list">
+            <li class="header-menu__item">
+              <a class="header-menu__link link" href="./">Студия</a>
+            </li>
+            <li class="header-menu__item">
+              <a class="header-menu__link header-menu__link--current link" href="./portfolio.html"
+                >Портфолио</a
+              >
+            </li>
+            <li class="header-menu__item">
+              <a class="header-menu__link link" href="">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+        <!-- Контакты в шапке -->
+        <ul class="header-contacts list">
+          <li class="header-contacts__item">
+            <a class="header-contacts__link link" href="mailto:info@devstudio.com">
+              <svg class="header-contacts__icon" width="16" height="12">
+                <use href="./images/icons.svg#envelope"></use>
+              </svg>
+              info@devstudio.com
+            </a>
+          </li>
+          <li class="header-contacts__item">
+            <a class="header-contacts__link link" href="tel:+380991111111">
+              <svg class="header-contacts__icon" width="10" height="16">
+                <use href="./images/icons.svg#smartphone"></use>
+              </svg>
+              +38 096 111 11 11
+            </a>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <!-- Конец шапки -->
+
+    <!-- Уникальный контент страницы -->
+    <main>
+      <h1 class="visually-hidden">Проекты веб-студии</h1>
+      <section class="section portfolio">
+        <div class="container">
+          <!-- Фильтр проектов -->
+          <div class="filter-box">
+            <button class="filter-box__btn" type="button">Все</button>
+            <button class="filter-box__btn" type="button">Веб-сайты</button>
+            <button class="filter-box__btn" type="button">Приложения</button>
+            <button class="filter-box__btn" type="button">Дизайн</button>
+            <button class="filter-box__btn" type="button">Маркетинг</button>
+          </div>
+
+          <!-- Проекты в портфолио -->
+          <ul class="project-list list">
+            <li class="project-list__item">
+              <div class="project-list__card">
+                <a class="project-list__link link" href="">
+                  <img
+                    src="./images/techno.jpg"
+                    alt="Веб-сайт для компании Технокряк"
+                    width="370"
+                    height="294"
+                  />
+                  <div class="project-list__overlay">
+                    <p class="project-list__overlay-text">
+                      Технокряк это современная площадка распространения коронавируса. Компании
+                      используют эту платформу для цифрового шпионажа и атак на защищённые сервера
+                      конкурентов.
+                    </p>
+                  </div>
+                  <div class="project-list__content">
+                    <h2 class="project-list__content-names">Технокряк</h2>
+                    <p class="project-list__content-description">Веб-сайт</p>
+                  </div>
+                </a>
+              </div>
+            </li>
+
+            <li class="project-list__item">
+              <div class="project-list__card">
+                <a class="project-list__link link" href="">
+                  <img
+                    src="./images/basketball.jpg"
+                    alt="Постер для баскетбольного клуба New Orlean vs Golden Star"
+                    width="370"
+                    height="294"
+                  />
+                  <div class="project-list__overlay">
+                    <p class="project-list__overlay-text">
+                      Постер для баскетбольного клуба New Orlean vs Golden Star &#8211; пример
+                      современного дизайна в полиграфии.
+                    </p>
+                  </div>
+                  <div class="project-list__content">
+                    <h2 class="project-list__content-names">
+                      Постер <span lang="en">New Orlean vs Golden Star</span>
+                    </h2>
+                    <p class="project-list__content-description">Дизайн</p>
+                  </div>
+                </a>
+              </div>
+            </li>
+
+            <li class="project-list__item">
+              <div class="project-list__card">
+                <a class="project-list__link link" href="">
+                  <img
+                    src="./images/seafood.jpg"
+                    alt="Приложение для ресторана Seafood"
+                    width="370"
+                    height="294"
+                  />
+                  <div class="project-list__overlay">
+                    <p class="project-list__overlay-text">
+                      Приложение для ресторана Seafood&nbsp;&#8211; это удобный интерфейс и высокая
+                      функциональность.
+                    </p>
+                  </div>
+                  <div class="project-list__content">
+                    <h2 class="project-list__content-names">
+                      Ресторан <span lang="en">Seafood</span>
+                    </h2>
+                    <p class="project-list__content-description">Приложение</p>
+                  </div></a
+                >
+              </div>
+            </li>
+
+            <li class="project-list__item">
+              <div class="project-list__card">
+                <a class="project-list__link link" href="">
+                  <img src="./images/prime.jpg" alt="Проект Prime" width="370" height="294" />
+                  <div class="project-list__overlay">
+                    <p class="project-list__overlay-text">
+                      Проект Prime &#8211; это программа, направленная на формирование узнаваемого
+                      положительного образа компании и её продукции.
+                    </p>
+                  </div>
+                  <div class="project-list__content">
+                    <h2 class="project-list__content-names">Проект <span lang="en">Prime</span></h2>
+                    <p class="project-list__content-description">Маркетинг</p>
+                  </div>
+                </a>
+              </div>
+            </li>
+
+            <li class="project-list__item">
+              <div class="project-list__card">
+                <a class="project-list__link link" href="">
+                  <img
+                    src="./images/boxes.jpg"
+                    alt="Приложение для проекта Boxes"
+                    width="370"
+                    height="294"
+                  />
+                  <div class="project-list__overlay">
+                    <p class="project-list__overlay-text">
+                      Приложение для проекта Boxes предлагает пользователям множество полезных
+                      функций и минималистичный дизайн.
+                    </p>
+                  </div>
+                  <div class="project-list__content">
+                    <h2 class="project-list__content-names">Проект <span lang="en">Boxes</span></h2>
+                    <p class="project-list__content-description">Приложение</p>
+                  </div>
+                </a>
+              </div>
+            </li>
+
+            <li class="project-list__item">
+              <div class="project-list__card">
+                <a class="project-list__link link" href="">
+                  <img
+                    src="./images/inspiration.jpg"
+                    alt="Веб-сайт для проекта Inspiration has no Borders"
+                    width="370"
+                    height="294"
+                  />
+                  <div class="project-list__overlay">
+                    <p class="project-list__overlay-text">
+                      Группа компаний Блюменбекер представляет новый веб-сайт. Он стал более
+                      привлекательным, современным и, самое главное, информативным для пользователя.
+                    </p>
+                  </div>
+                  <div class="project-list__content">
+                    <h2 lang="en" class="project-list__content-names">
+                      Inspiration has no Borders
+                    </h2>
+                    <p class="project-list__content-description">Веб-сайт</p>
+                  </div>
+                </a>
+              </div>
+            </li>
+
+            <li class="project-list__item">
+              <div class="project-list__card">
+                <a class="project-list__link link" href="">
+                  <img
+                    src="./images/edition.jpg"
+                    alt="Издание Limited Edition"
+                    width="370"
+                    height="294"
+                  />
+                  <div class="project-list__overlay">
+                    <p class="project-list__overlay-text">
+                      Если вы любите коллекционировать комиксы, то не пропустите новое издание про
+                      Бетмена, которое вышло ограниченным тиражом.
+                    </p>
+                  </div>
+                  <div class="project-list__content">
+                    <h2 class="project-list__content-names">
+                      Издание <span lang="en">Limited Edition</span>
+                    </h2>
+                    <p class="project-list__content-description">Дизайн</p>
+                  </div>
+                </a>
+              </div>
+            </li>
+
+            <li class="project-list__item">
+              <div class="project-list__card">
+                <a class="project-list__link link" href="">
+                  <img src="./images/lab.jpg" alt="Проект LAB" width="370" height="294" />
+                  <div class="project-list__overlay">
+                    <p class="project-list__overlay-text">
+                      Инструменты для построения сильного бренда. Разработка маркетинговой
+                      стратегии. Стратегии роста и позиционирования. Этапы стратегического
+                      планирования.
+                    </p>
+                  </div>
+                  <div class="project-list__content">
+                    <h2 class="project-list__content-names">Проект <span lang="en">LAB</span></h2>
+                    <p class="project-list__content-description">Маркетинг</p>
+                  </div>
+                </a>
+              </div>
+            </li>
+
+            <li class="project-list__item">
+              <div class="project-list__card">
+                <a class="project-list__link link" href="">
+                  <img
+                    src="./images/business.jpg"
+                    alt="Growing Business"
+                    width="370"
+                    height="294"
+                  />
+                  <div class="project-list__overlay">
+                    <p class="project-list__overlay-text">
+                      При помощи нашего нового приложения удобно вести бухгалтерский учет,
+                      подсчитывать доходы и расходы, отправлять счета клиентам.
+                    </p>
+                  </div>
+                  <div class="project-list__content">
+                    <h2 class="project-list__content-names">
+                      Приложение <span lang="en">Growing Business</span>
+                    </h2>
+                    <p class="project-list__content-description">Приложение</p>
+                  </div>
+                </a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <!-- Подвал -->
+    <footer class="page-footer">
+      <div class="container">
+        <div class="address-wrapper">
+          <div class="box-address">
+            <a class="logo page-footer__logo" lang="en" href="/"
+              >Web<span class="logo__part--inverse">Studio</span></a
+            >
+            <address class="page-footer__contacts">
+              г. Киев, пр-т Леси Украинки, 26 <br />
+              <a class="link page-footer__contacts-mail" href="mailto:info@example.com"
+                >info@example.com</a
+              >
+              <br />
+              <a class="link page-footer__contacts-phone" href="tel:+380991111111"
+                >+38 099 111 11 11</a
+              >
+            </address>
+          </div>
+
+          <div class="social-address">
+            <p class="social-address__title">Присоединяйтесь</p>
+            <ul class="list social-address__list">
+              <li class="social-address__item">
+                <a href="" class="link social-address__link">
+                  <svg class="social-address__icon" width="20" height="20">
+                    <use href="./images/icons.svg#instagram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social-address__item">
+                <a href="" class="link social-address__link">
+                  <svg class="social-address__icon" width="20" height="20">
+                    <use href="./images/icons.svg#twitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social-address__item">
+                <a href="" class="link social-address__link">
+                  <svg class="social-address__icon" width="20" height="20">
+                    <use href="./images/icons.svg#facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social-address__item">
+                <a href="" class="link social-address__link">
+                  <svg class="social-address__icon" width="20" height="20">
+                    <use href="./images/icons.svg#linkedin"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <form action="#" class="newsletter-form" method="GET">
+            <div role="group" aria-labelledby="newsletter-details-head" class="newsletter-field">
+              <p class="newsletter-form__title" id="newsletter-details-head">
+                Подпишитесь на рассылку
+              </p>
+              <label for="user_email" class="visually-hidden">Email</label>
+              <input
+                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                required
+                type="email"
+                name="email"
+                id="user_email"
+                placeholder="E-mail"
+                class="newsletter-form__email"
+              />
+              <button class="newsletter-form__btn button" type="submit">
+                Подписаться
+                <svg class="newsletter-form__icon" width="24" height="24">
+                  <use href="./images/icons.svg#send"></use>
+                </svg>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
