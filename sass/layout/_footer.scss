@@ -1,0 +1,39 @@
+.page-footer {
+  background-color: #2f303a;
+  padding: 60px 0;
+
+  &__logo {
+    display: inline-block;
+    margin-bottom: 20px;
+  }
+}
+
+.logo__part--inverse {
+  color: #ffffff;
+}
+
+.address-wrapper {
+  @include flex-box($ai: baseline);
+}
+
+.page-footer__contacts {
+  color: #ffffff;
+  font-style: normal;
+  line-height: 1.71;
+
+  & .link:hover,
+  & .link:focus {
+    color: var(--accent-color);
+  }
+}
+
+.page-footer__contacts-mail,
+.page-footer__contacts-phone {
+  color: var(--primary-text-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.page-footer__contacts-mail {
+  display: inline-block;
+  margin: 9px 0;
+}

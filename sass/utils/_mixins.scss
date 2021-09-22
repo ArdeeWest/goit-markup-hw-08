@@ -1,0 +1,19 @@
+@mixin button() {
+  display: inline-block;
+  font-family: inherit;
+  font-size: 16px;
+
+  letter-spacing: inherit;
+  text-align: center;
+
+  border-radius: 4px;
+  border: none;
+
+  cursor: pointer;
+}
+
+@mixin flex-box($d: flex, $ai: center, $jc: center) {
+  display: $d;
+  align-items: $ai;
+  justify-content: $jc;
+}

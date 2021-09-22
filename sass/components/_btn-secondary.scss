@@ -1,0 +1,28 @@
+.filter-box {
+  text-align: center;
+  font-size: 0;
+  margin-bottom: 50px;
+}
+
+.filter-box__btn {
+  @include button();
+  color: var(--title-text-color);
+  background-color: var(--secondary-background-color);
+
+  font-weight: 500;
+  line-height: 1.62;
+
+  padding: 6px 22px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:not(:first-child) {
+    margin-left: 8px;
+  }
+
+  &:hover,
+  &:focus {
+    color: var(--secondary-text-color);
+    background-color: var(--accent-color);
+  }
+}

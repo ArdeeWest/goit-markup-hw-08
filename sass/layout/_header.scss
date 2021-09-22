@@ -1,0 +1,97 @@
+.page-header {
+  border-bottom: 1px solid #ececec;
+
+  &__logo {
+    animation: animateLogo 3000ms linear 250ms 2;
+  }
+}
+
+.container-nav,
+.header-nav {
+  @include flex-box();
+}
+
+.header-menu,
+.header-contacts {
+  @include flex-box($ai: baseline);
+
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+}
+
+.header-menu {
+  margin-left: 93px;
+}
+
+.header-menu__item {
+  position: relative;
+
+  &:not(:last-child) {
+    margin-right: 50px;
+  }
+}
+
+.header-menu__link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  color: var(--title-text-color);
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+}
+
+.header-menu__link--current {
+  color: var(--accent-color);
+
+  &::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    content: '';
+
+    width: 48px;
+    height: 4px;
+    border-radius: 2px;
+    margin-bottom: -1px;
+
+    background: var(--accent-color);
+  }
+}
+
+a[href='./portfolio.html']::after {
+  width: 78px;
+}
+
+.header-contacts {
+  margin-left: auto;
+}
+
+.header-contacts__item {
+  &:not(:first-child) {
+    margin-left: 30px;
+  }
+}
+
+.header-contacts__link {
+  color: var(--primary-text-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+    fill: var(--accent-color);
+  }
+}
+
+.header-contacts__icon {
+  vertical-align: bottom;
+  fill: currentColor;
+  margin-right: 10px;
+}
