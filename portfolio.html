@@ -29,8 +29,64 @@
           <a class="logo page-header__logo" lang="en" href="./index.html"
             >Web<span class="logo__part">Studio</span></a
           >
-
-          <!-- Меню -->
+          <!-- Мобильное меню -->
+          <button
+            type="button"
+            class="mobile-menu__button js-open-menu"
+            aria-controls="mobile-menu"
+            aria-expanded="false"
+          >
+            <svg width="40" height="40" aria-label="Кнопка открытия мобильного меню">
+              <use class="mobile-menu__icon-burger" href="./images/icons.svg#burger"></use>
+            </svg>
+          </button>
+          <div class="mobile-menu-container js-menu-container">
+            <button type="button" class="mobile-menu__button--close js-close-menu">
+              <svg width="40" height="40" aria-label="Кнопка закрытия мобильного меню">
+                <use class="mobile-menu__icon-cross" href="./images/icons.svg#cross"></use>
+              </svg>
+            </button>
+            <ul class="mobile-menu list" id="mobile-menu">
+              <li class="mobile-menu__item">
+                <a class="mobile-menu__link link" href="./">Студия</a>
+              </li>
+              <li class="mobile-menu__item">
+                <a class="mobile-menu__link link" href="./portfolio.html">Портфолио</a>
+              </li>
+              <li class="mobile-menu__item">
+                <a class="mobile-menu__link link" href="">Контакты</a>
+              </li>
+            </ul>
+            <div class="mobile-menu-connect">
+              <ul class="mobile-menu__contacts list">
+                <li class="mobile-menu__item">
+                  <a class="mobile-menu__link-phone link" href="tel:+380991111111">
+                    +38 096 111 11 11
+                  </a>
+                </li>
+                <li class="mobile-menu__item">
+                  <a class="mobile-menu__link-email link" href="mailto:info@devstudio.com">
+                    info@devstudio.com
+                  </a>
+                </li>
+              </ul>
+              <ul class="mobile-menu__socials list">
+                <li class="mobile-menu__social-item">
+                  <a class="mobile-menu__socials-link link" href="">Instagram</a>
+                </li>
+                <li class="mobile-menu__social-item">
+                  <a class="mobile-menu__socials-link link" href="">Twitter</a>
+                </li>
+                <li class="mobile-menu__social-item">
+                  <a class="mobile-menu__socials-link link" href="">Facebook</a>
+                </li>
+                <li class="mobile-menu__social-item">
+                  <a class="mobile-menu__socials-link link" href="">Linkedin</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- Обычное меню для десктопа -->
           <ul class="header-menu list">
             <li class="header-menu__item">
               <a class="header-menu__link link" href="./">Студия</a>
@@ -44,26 +100,26 @@
               <a class="header-menu__link link" href="">Контакты</a>
             </li>
           </ul>
+          <!-- Контакты в шапке -->
+          <ul class="header-contacts list">
+            <li class="header-contacts__item">
+              <a class="header-contacts__link link" href="mailto:info@devstudio.com">
+                <svg class="header-contacts__icon email-icon" width="16" height="12">
+                  <use href="./images/icons.svg#envelope"></use>
+                </svg>
+                info@devstudio.com
+              </a>
+            </li>
+            <li class="header-contacts__item">
+              <a class="header-contacts__link link" href="tel:+380991111111">
+                <svg class="header-contacts__icon phone-icon" width="10" height="16">
+                  <use href="./images/icons.svg#smartphone"></use>
+                </svg>
+                +38 096 111 11 11
+              </a>
+            </li>
+          </ul>
         </nav>
-        <!-- Контакты в шапке -->
-        <ul class="header-contacts list">
-          <li class="header-contacts__item">
-            <a class="header-contacts__link link" href="mailto:info@devstudio.com">
-              <svg class="header-contacts__icon" width="16" height="12">
-                <use href="./images/icons.svg#envelope"></use>
-              </svg>
-              info@devstudio.com
-            </a>
-          </li>
-          <li class="header-contacts__item">
-            <a class="header-contacts__link link" href="tel:+380991111111">
-              <svg class="header-contacts__icon" width="10" height="16">
-                <use href="./images/icons.svg#smartphone"></use>
-              </svg>
-              +38 096 111 11 11
-            </a>
-          </li>
-        </ul>
       </div>
     </header>
     <!-- Конец шапки -->
@@ -87,12 +143,26 @@
             <li class="project-list__item">
               <div class="project-list__card">
                 <a class="project-list__link link" href="">
-                  <img
-                    src="./images/techno.jpg"
-                    alt="Веб-сайт для компании Технокряк"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="./images/techno.jpg 1x, ./images/techno-desc-2x.jpg 2x"
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="./images/techno-tab-1x.jpg 1x, ./images/techno-tab-2x.jpg 2x"
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="./images/techno-mob-1x.jpg 1x, ./images/techno-mob-2x.jpg 2x"
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      src="./images/techno.jpg"
+                      alt="Веб-сайт для компании Технокряк"
+                      width="370"
+                      height="294"
+                    />
+                  </picture>
                   <div class="project-list__overlay">
                     <p class="project-list__overlay-text">
                       Технокряк это современная площадка распространения коронавируса. Компании
@@ -111,12 +181,26 @@
             <li class="project-list__item">
               <div class="project-list__card">
                 <a class="project-list__link link" href="">
-                  <img
-                    src="./images/basketball.jpg"
-                    alt="Постер для баскетбольного клуба New Orlean vs Golden Star"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="./images/basketball.jpg 1x, ./images/basketball-desc-2x.jpg 2x"
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="./images/basketball-tab-1x.jpg 1x, ./images/basketball-tab-2x.jpg 2x"
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="./images/basketball-mob-1x.jpg 1x, ./images/basketball-mob-2x.jpg 2x"
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      src="./images/basketball.jpg"
+                      alt="Постер для баскетбольного клуба New Orlean vs Golden Star"
+                      width="370"
+                      height="294"
+                    />
+                  </picture>
                   <div class="project-list__overlay">
                     <p class="project-list__overlay-text">
                       Постер для баскетбольного клуба New Orlean vs Golden Star &#8211; пример
@@ -136,12 +220,26 @@
             <li class="project-list__item">
               <div class="project-list__card">
                 <a class="project-list__link link" href="">
-                  <img
-                    src="./images/seafood.jpg"
-                    alt="Приложение для ресторана Seafood"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="./images/seafood.jpg 1x, ./images/seafood-desc-2x.jpg 2x"
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="./images/seafood-tab-1x.jpg 1x, ./images/seafood-tab-2x.jpg 2x"
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="./images/seafood-mob-1x.jpg 1x, ./images/seafood-mob-2x.jpg 2x"
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      src="./images/seafood.jpg"
+                      alt="Приложение для ресторана Seafood"
+                      width="370"
+                      height="294"
+                    />
+                  </picture>
                   <div class="project-list__overlay">
                     <p class="project-list__overlay-text">
                       Приложение для ресторана Seafood&nbsp;&#8211; это удобный интерфейс и высокая
@@ -161,7 +259,21 @@
             <li class="project-list__item">
               <div class="project-list__card">
                 <a class="project-list__link link" href="">
-                  <img src="./images/prime.jpg" alt="Проект Prime" width="370" height="294" />
+                  <picture>
+                    <source
+                      srcset="./images/prime.jpg 1x, ./images/prime-desc-2x.jpg 2x"
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="./images/prime-tab-1x.jpg 1x, ./images/prime-tab-2x.jpg 2x"
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="./images/prime-mob-1x.jpg 1x, ./images/prime-mob-2x.jpg 2x"
+                      media="(max-width: 767px)"
+                    />
+                    <img src="./images/prime.jpg" alt="Проект Prime" width="370" height="294" />
+                  </picture>
                   <div class="project-list__overlay">
                     <p class="project-list__overlay-text">
                       Проект Prime &#8211; это программа, направленная на формирование узнаваемого
@@ -179,12 +291,26 @@
             <li class="project-list__item">
               <div class="project-list__card">
                 <a class="project-list__link link" href="">
-                  <img
-                    src="./images/boxes.jpg"
-                    alt="Приложение для проекта Boxes"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="./images/boxes.jpg 1x, ./images/boxes-desc-2x.jpg 2x"
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="./images/boxes-tab-1x.jpg 1x, ./images/boxes-tab-2x.jpg 2x"
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="./images/boxes-mob-1x.jpg 1x, ./images/boxes-mob-2x.jpg 2x"
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      src="./images/boxes.jpg"
+                      alt="Приложение для проекта Boxes"
+                      width="370"
+                      height="294"
+                    />
+                  </picture>
                   <div class="project-list__overlay">
                     <p class="project-list__overlay-text">
                       Приложение для проекта Boxes предлагает пользователям множество полезных
@@ -202,12 +328,32 @@
             <li class="project-list__item">
               <div class="project-list__card">
                 <a class="project-list__link link" href="">
-                  <img
-                    src="./images/inspiration.jpg"
-                    alt="Веб-сайт для проекта Inspiration has no Borders"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="./images/inspiration.jpg 1x, ./images/inspiration-desc-2x.jpg 2x"
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/inspiration-tab-1x.jpg 1x,
+                        ./images/inspiration-tab-2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/inspiration-mob-1x.jpg 1x,
+                        ./images/inspiration-mob-2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      src="./images/inspiration.jpg"
+                      alt="Веб-сайт для проекта Inspiration has no Borders"
+                      width="370"
+                      height="294"
+                    />
+                  </picture>
                   <div class="project-list__overlay">
                     <p class="project-list__overlay-text">
                       Группа компаний Блюменбекер представляет новый веб-сайт. Он стал более
@@ -227,12 +373,26 @@
             <li class="project-list__item">
               <div class="project-list__card">
                 <a class="project-list__link link" href="">
-                  <img
-                    src="./images/edition.jpg"
-                    alt="Издание Limited Edition"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="./images/edition.jpg 1x, ./images/edition-desc-2x.jpg 2x"
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="./images/edition-tab-1x.jpg 1x, ./images/edition-tab-2x.jpg 2x"
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="./images/edition-mob-1x.jpg 1x, ./images/edition-mob-2x.jpg 2x"
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      src="./images/edition.jpg"
+                      alt="Издание Limited Edition"
+                      width="370"
+                      height="294"
+                    />
+                  </picture>
                   <div class="project-list__overlay">
                     <p class="project-list__overlay-text">
                       Если вы любите коллекционировать комиксы, то не пропустите новое издание про
@@ -252,7 +412,21 @@
             <li class="project-list__item">
               <div class="project-list__card">
                 <a class="project-list__link link" href="">
-                  <img src="./images/lab.jpg" alt="Проект LAB" width="370" height="294" />
+                  <picture>
+                    <source
+                      srcset="./images/lab.jpg 1x, ./images/lab-desc-2x.jpg 2x"
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="./images/lab-tab-1x.jpg 1x, ./images/lab-tab-2x.jpg 2x"
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="./images/lab-mob-1x.jpg 1x, ./images/lab-mob-2x.jpg 2x"
+                      media="(max-width: 767px)"
+                    />
+                    <img src="./images/lab.jpg" alt="Проект LAB" width="370" height="294" />
+                  </picture>
                   <div class="project-list__overlay">
                     <p class="project-list__overlay-text">
                       Инструменты для построения сильного бренда. Разработка маркетинговой
@@ -271,12 +445,26 @@
             <li class="project-list__item">
               <div class="project-list__card">
                 <a class="project-list__link link" href="">
-                  <img
-                    src="./images/business.jpg"
-                    alt="Growing Business"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="./images/business.jpg 1x, ./images/business-desc-2x.jpg 2x"
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="./images/business-tab-1x.jpg 1x, ./images/business-tab-2x.jpg 2x"
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="./images/business-mob-1x.jpg 1x, ./images/business-mob-2x.jpg 2x"
+                      media="(max-width: 768px)"
+                    />
+                    <img
+                      src="./images/business.jpg"
+                      alt="Growing Business"
+                      width="370"
+                      height="294"
+                    />
+                  </picture>
                   <div class="project-list__overlay">
                     <p class="project-list__overlay-text">
                       При помощи нашего нового приложения удобно вести бухгалтерский учет,
@@ -376,5 +564,12 @@
         </div>
       </div>
     </footer>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="js/mobile-menu.js"></script>
   </body>
 </html>

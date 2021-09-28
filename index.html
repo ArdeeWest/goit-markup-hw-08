@@ -29,8 +29,64 @@
           <a class="logo page-header__logo" lang="en" href="./index.html"
             >Web<span class="logo__part">Studio</span></a
           >
-
-          <!-- Меню -->
+          <!-- Мобильное меню -->
+          <button
+            type="button"
+            class="mobile-menu__button js-open-menu"
+            aria-controls="mobile-menu"
+            aria-expanded="false"
+          >
+            <svg width="40" height="40" aria-label="Кнопка открытия мобильного меню">
+              <use class="mobile-menu__icon-burger" href="./images/icons.svg#burger"></use>
+            </svg>
+          </button>
+          <div class="mobile-menu-container js-menu-container">
+            <button type="button" class="mobile-menu__button--close js-close-menu">
+              <svg width="40" height="40" aria-label="Кнопка закрытия мобильного меню">
+                <use class="mobile-menu__icon-cross" href="./images/icons.svg#cross"></use>
+              </svg>
+            </button>
+            <ul class="mobile-menu list" id="mobile-menu">
+              <li class="mobile-menu__item">
+                <a class="mobile-menu__link link" href="./">Студия</a>
+              </li>
+              <li class="mobile-menu__item">
+                <a class="mobile-menu__link link" href="./portfolio.html">Портфолио</a>
+              </li>
+              <li class="mobile-menu__item">
+                <a class="mobile-menu__link link" href="">Контакты</a>
+              </li>
+            </ul>
+            <div class="mobile-menu-connect">
+              <ul class="mobile-menu__contacts list">
+                <li class="mobile-menu__item">
+                  <a class="mobile-menu__link-phone link" href="tel:+380991111111">
+                    +38 096 111 11 11
+                  </a>
+                </li>
+                <li class="mobile-menu__item">
+                  <a class="mobile-menu__link-email link" href="mailto:info@devstudio.com">
+                    info@devstudio.com
+                  </a>
+                </li>
+              </ul>
+              <ul class="mobile-menu__socials list">
+                <li class="mobile-menu__social-item">
+                  <a class="mobile-menu__socials-link link" href="">Instagram</a>
+                </li>
+                <li class="mobile-menu__social-item">
+                  <a class="mobile-menu__socials-link link" href="">Twitter</a>
+                </li>
+                <li class="mobile-menu__social-item">
+                  <a class="mobile-menu__socials-link link" href="">Facebook</a>
+                </li>
+                <li class="mobile-menu__social-item">
+                  <a class="mobile-menu__socials-link link" href="">Linkedin</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- Обычное меню для десктопа -->
           <ul class="header-menu list">
             <li class="header-menu__item">
               <a class="header-menu__link link header-menu__link--current" href="./">Студия</a>
@@ -42,26 +98,26 @@
               <a class="header-menu__link link" href="">Контакты</a>
             </li>
           </ul>
+          <!-- Контакты в шапке -->
+          <ul class="header-contacts list">
+            <li class="header-contacts__item">
+              <a class="header-contacts__link link" href="mailto:info@devstudio.com">
+                <svg class="header-contacts__icon email-icon" width="16" height="12">
+                  <use href="./images/icons.svg#envelope"></use>
+                </svg>
+                info@devstudio.com
+              </a>
+            </li>
+            <li class="header-contacts__item">
+              <a class="header-contacts__link link" href="tel:+380991111111">
+                <svg class="header-contacts__icon phone-icon" width="10" height="16">
+                  <use href="./images/icons.svg#smartphone"></use>
+                </svg>
+                +38 096 111 11 11
+              </a>
+            </li>
+          </ul>
         </nav>
-        <!-- Контакты в шапке -->
-        <ul class="header-contacts list">
-          <li class="header-contacts__item">
-            <a class="header-contacts__link link" href="mailto:info@devstudio.com">
-              <svg class="header-contacts__icon" width="16" height="12">
-                <use href="./images/icons.svg#envelope"></use>
-              </svg>
-              info@devstudio.com
-            </a>
-          </li>
-          <li class="header-contacts__item">
-            <a class="header-contacts__link link" href="tel:+380991111111">
-              <svg class="header-contacts__icon" width="10" height="16">
-                <use href="./images/icons.svg#smartphone"></use>
-              </svg>
-              +38 096 111 11 11
-            </a>
-          </li>
-        </ul>
       </div>
     </header>
     <!-- Конец шапки -->
@@ -131,7 +187,7 @@
             </li>
           </ul>
 
-          <h2 class="section-title">Чем мы занимаемся</h2>
+          <h2 class="section-work__title">Чем мы занимаемся</h2>
           <ul class="list work-list">
             <li class="work-list__item">
               <div class="work-list__label">
@@ -139,6 +195,7 @@
               </div>
               <img
                 src="./images/keyboard.jpg"
+                srcset="./images/keyboard-1x.jpg 1x, ./images/keyboard-2x.jpg 2x"
                 alt="крупным планом руки, печатающие на клавиатуре"
                 width="370"
                 height="294"
@@ -151,6 +208,7 @@
               </div>
               <img
                 src="./images/notebook.jpg"
+                srcset="./images/notebook-1x.jpg 1x, ./images/notebook-2x.jpg 2x"
                 alt="смартфон в руках человека и ноутбук с изображением телефонов на мониторе"
                 width="370"
                 height="294"
@@ -163,6 +221,7 @@
               </div>
               <img
                 src="./images/tablet.jpg"
+                srcset="./images/tablet-1x.jpg 1x, ./images/tablet-2x.jpg 2x"
                 alt="планшет с цветной палитрой в руках человека"
                 width="370"
                 height="294"
@@ -179,12 +238,26 @@
           <ul class="list team-list">
             <li class="team-list__item">
               <div class="team-list__img">
-                <img
-                  src="./images/ihor.jpg"
-                  alt="Фотография продакт-дизайнера Игоря Демяненка"
-                  width="270"
-                  height="260"
-                />
+                <picture>
+                  <source
+                    srcset="./images/ihor-mob-1x.jpg 1x, ./images/ihor-mob-2x.jpg 2x"
+                    media="(max-width: 767px)"
+                  />
+                  <source
+                    srcset="./images/ihor-tab-1x.jpg 1x, ./images/ihor-tab-2x.jpg 2x"
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="./images/ihor-desc-1x.jpg 1x, ./images/ihor-desc-2x.jpg 2x"
+                    media="(min-width: 1200px)"
+                  />
+                  <img
+                    src="./images/ihor.jpg"
+                    alt="Фотография продакт-дизайнера Игоря Демяненка"
+                    width="270"
+                    height="260"
+                  />
+                </picture>
                 <div class="team-list__content">
                   <h3 class="team-list__names">Игорь Демьяненко</h3>
                   <p class="team-list__profession" lang="en">Product Designer</p>
@@ -224,12 +297,26 @@
 
             <li class="team-list__item">
               <div class="team-list__img">
-                <img
-                  src="./images/olga.jpg"
-                  alt="Фотография фронт-энд-девелопера Ольги Репиной"
-                  width="270"
-                  height="260"
-                />
+                <picture>
+                  <source
+                    srcset="./images/olga-mob-1x.jpg 1x, ./images/olga-mob-2x.jpg 2x"
+                    media="(max-width: 767px)"
+                  />
+                  <source
+                    srcset="./images/olga-tab-1x.jpg 1x, ./images/olga-tab-2x.jpg 2x"
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="./images/olga-desc-1x.jpg 1x, ./images/olga-desc-2x.jpg 2x"
+                    media="(min-width: 1200px)"
+                  />
+                  <img
+                    src="./images/olga.jpg"
+                    alt="Фотография фронт-энд-девелопера Ольги Репиной"
+                    width="270"
+                    height="260"
+                  />
+                </picture>
                 <div class="team-list__content">
                   <h3 class="team-list__names">Ольга Репина</h3>
                   <p class="team-list__profession" lang="en">Frontend Developer</p>
@@ -269,12 +356,26 @@
 
             <li class="team-list__item">
               <div class="team-list__img">
-                <img
-                  src="./images/nikolay.jpg"
-                  alt="Фотография маркетолога Николая Тарасова"
-                  width="270"
-                  height="260"
-                />
+                <picture>
+                  <source
+                    srcset="./images/nikolay-mob-1x.jpg 1x, ./images/nikolay-mob-2x.jpg 2x"
+                    media="(max-width: 767px)"
+                  />
+                  <source
+                    srcset="./images/nikolay-tab-1x.jpg 1x, ./images/nikolay-tab-2x.jpg 2x"
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="./images/nikolay-desc-1x.jpg 1x, ./images/nikolay-desc-2x.jpg 2x"
+                    media="(min-width: 1200px)"
+                  />
+                  <img
+                    src="./images/nikolay.jpg"
+                    alt="Фотография маркетолога Николая Тарасова"
+                    width="270"
+                    height="260"
+                  />
+                </picture>
                 <div class="team-list__content">
                   <h3 class="team-list__names">Николай Тарасов</h3>
                   <p class="team-list__profession" lang="en">Marketing</p>
@@ -314,12 +415,26 @@
 
             <li class="team-list__item">
               <div class="team-list__img">
-                <img
-                  src="./images/michael.jpg"
-                  alt="Фотография юи-дизайнера Михаила Ермакова"
-                  width="270"
-                  height="260"
-                />
+                <picture>
+                  <source
+                    srcset="./images/michael-mob-1x.jpg 1x, ./images/michael-mob-2x.jpg 2x"
+                    media="(max-width: 767px)"
+                  />
+                  <source
+                    srcset="./images/michael-tab-1x.jpg 1x, ./images/michael-tab-2x.jpg 2x"
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="./images/michael-desc-1x.jpg 1x, ./images/michael-desc-2x.jpg 2x"
+                    media="(min-width: 1200px)"
+                  />
+                  <img
+                    src="./images/michael.jpg"
+                    alt="Фотография юи-дизайнера Михаила Ермакова"
+                    width="270"
+                    height="260"
+                  />
+                </picture>
                 <div class="team-list__content">
                   <h3 class="team-list__names">Михаил Ермаков</h3>
                   <p class="team-list__profession" lang="en">UI Designer</p>
@@ -574,8 +689,10 @@
                   <use href="./images/icons.svg#checkbox"></use>
                 </svg>
               </span>
-              Соглашаюсь с рассылкой и принимаю&nbsp;
-              <a class="policy__link" href="">Условия договора</a>
+              <span class="policy__text">
+                Соглашаюсь с рассылкой и принимаю&nbsp;
+                <a class="policy__link" href="">Условия договора</a>
+              </span>
             </label>
           </div>
 
@@ -585,5 +702,14 @@
     </div>
     <!-- скрипт для открытия и закрытия модального окна с формой отправки -->
     <script src="./js/modal.js"></script>
+
+    <!-- скрипт для открытия и закрытия мобильного меню -->
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="js/mobile-menu.js"></script>
   </body>
 </html>
