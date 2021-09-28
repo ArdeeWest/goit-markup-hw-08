@@ -1,5 +1,14 @@
 .social-address {
-  margin-left: 70px;
+  margin: 0 auto;
+  margin-bottom: 60px;
+
+  @media screen and (min-width: 768px) {
+    margin: 0;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-left: 70px;
+  }
 
   &__title {
     color: #ffffff;
@@ -13,6 +22,7 @@
 
   &__list {
     display: flex;
+    justify-content: center;
   }
 }
 

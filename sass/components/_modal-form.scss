@@ -9,6 +9,7 @@
     margin-bottom: 12px;
     line-height: calc(23 / 20);
     color: rgba(33, 33, 33, 1);
+    text-align: center;
   }
 
   input[name='name'] {
@@ -94,6 +95,16 @@
   @include flex-box();
   margin-bottom: 30px;
 
+  &__text {
+    font-size: 12px;
+    line-height: calc(14 / 12);
+
+    @media screen and (min-width: 1200px) {
+      font-size: 14px;
+      line-height: calc(24 / 14);
+    }
+  }
+
   &__link {
     color: var(--accent-color);
   }
@@ -116,6 +127,7 @@
   width: 16px;
   height: 15px;
   border: 2px solid rgba(33, 33, 33, 1);
+  border-radius: 2px;
   margin-right: 8px;
 
   .order-checkbox__input:checked + & {

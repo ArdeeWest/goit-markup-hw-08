@@ -5,7 +5,10 @@
   transform: translate(-50%, -50%);
 
   width: 528px;
-  min-height: 581px;
+  max-width: calc(100% - 30px);
+  max-height: 100vh;
+
+  overflow-y: auto;
   border-radius: 4px;
 
   background: #ffffff;
